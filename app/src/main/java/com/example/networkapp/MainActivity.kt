@@ -48,8 +48,7 @@ class MainActivity : AppCompatActivity() {
     private fun downloadComic (comicId: String) {
         val url = "https://xkcd.com/$comicId/info.0.json"
         requestQueue.add (
-            JsonObjectRequest(url, {showComic(it)}, {
-            })
+            JsonObjectRequest(url, {showComic(it)}, {})
         )
     }
 
@@ -60,4 +59,8 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    //Saves comic to storage
+    private fun saveComic() {
+
+    }
 }
